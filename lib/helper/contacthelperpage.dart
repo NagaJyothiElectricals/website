@@ -261,7 +261,16 @@ class _ContactHelperPageState extends State<ContactHelperPage> {
                     ),
                   ),
                   // Contact Info
-                  Center(child: Text("📞 Phone: +91 9666111105")),
+                  Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("📞 Phone: +91 9666111105"),
+                        SizedBox(width: 10),
+                        Text("📞 Office: +91 9989376363"),
+                      ],
+                    ),
+                  ),
                   Center(
                     child: Text("✉️ Email: info@nagajyothielectricals.com"),
                   ),

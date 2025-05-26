@@ -21,11 +21,7 @@ class _LandingPageState extends State<LandingPage> {
 
     // Use your provided video URL
     _controller =
-        VideoPlayerController.networkUrl(
-            Uri.parse(
-              'https://static.videezy.com/system/resources/previews/000/046/535/original/Lightning.mp4',
-            ),
-          )
+        VideoPlayerController.asset('assets/videos/light.mp4')
           ..setLooping(true)
           ..setVolume(0)
           ..initialize().then((_) {

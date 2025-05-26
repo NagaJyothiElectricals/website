@@ -147,7 +147,7 @@ class _ServicesHelperPageState extends State<ServicesHelperPage> {
                   child: Column(
                     children: [
                       Image.asset(
-                        'images/Siemenslogo.jpg',
+                        'assets/images/Siemenslogo.jpg',
                         fit: BoxFit.fill,
                         height: 140,
                       ),
@@ -179,7 +179,7 @@ class _ServicesHelperPageState extends State<ServicesHelperPage> {
                   child: Column(
                     children: [
                       Image.asset(
-                        'images/LT.jpeg',
+                        'assets/images/LT.jpeg',
                         fit: BoxFit.fill,
                         height: 140,
                       ),
@@ -211,7 +211,7 @@ class _ServicesHelperPageState extends State<ServicesHelperPage> {
                   child: Column(
                     children: [
                       Image.asset(
-                        'images/abb.png',
+                        'assets/images/abb.png',
                         fit: BoxFit.fill,
                         height: 140,
                       ),
@@ -243,7 +243,7 @@ class _ServicesHelperPageState extends State<ServicesHelperPage> {
                   child: Column(
                     children: [
                       Image.asset(
-                        'images/sch.jpeg',
+                        'assets/images/sch.jpeg',
                         fit: BoxFit.fill,
                         height: 140,
                       ),
@@ -485,28 +485,28 @@ final List<Service> services = [
     title: "Industrial Wiring",
     description: "Robust wiring solutions for industrial units.",
     icon: Icons.electrical_services,
-    image: "images/pic21.jpg",
+    image: "assets/images/pic21.jpg",
     bullets: ["Heavy-duty cables", "Circuit protection", "Load testing"],
   ),
   Service(
     title: "HT/LT Installation",
     description: "Complete HT/LT panels and switchgear setup.",
     icon: Icons.power,
-    image: "images/pic17.jpg",
+    image: "assets/images/pic17.jpg",
     bullets: ["HT panels", "Transformer setup", "Relay coordination"],
   ),
   Service(
     title: "Automation & Control",
     description: "Automating processes with precision.",
     icon: Icons.settings_remote,
-    image: "images/pic4.jpg",
+    image: "assets/images/pic4.jpg",
     bullets: ["PLC integration", "SCADA setup", "Remote monitoring"],
   ),
   Service(
     title: "Annual Maintenance",
     description: "Reliable AMC for uninterrupted operations.",
     icon: Icons.build,
-    image: "images/pic6.jpg",
+    image: "assets/images/pic6.jpg",
     bullets: ["Preventive checks", "Fault diagnosis", "Quick repairs"],
   ),
 ];

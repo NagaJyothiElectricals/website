@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 backgroundColor: Colors.blue,
                 child: ClipOval(
                   child: Image.asset(
-                    'images/scrappy.png', // your transparent icon image here
+                    'assets/images/scrappy.png', // your transparent icon image here
                     width: 38,
                     height: 38,
                     fit: BoxFit.contain,
@@ -67,21 +67,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     quickLinks(
                       email: 'info@nagajyothielectricals.com',
                       phone: '+91 9666111105',
+                      phone1: '+91 9989376363',
                     ),
-
-                    // RichText(
-                    //   text: TextSpan(
-                    //     text: 'Gmail: Info@nje.com',
-                    //     style: TextStyle(color: Colors.white),
-                    //   ),
-                    // ),
-                    // TextButton(
-                    //   onPressed: () {},
-                    //   child: Text(
-                    //     'Call Us: +91 9666111105',
-                    //     style: TextStyle(color: Colors.white),
-                    //   ),
-                    // ),
                   ],
                 ),
               ),
@@ -95,39 +82,40 @@ class _MyHomePageState extends State<MyHomePage> {
             padding: const EdgeInsets.all(5.0),
             child: Row(
               children: [
-                SizedBox(height: 10.0),
+                SizedBox(height: 20.0),
                 Image.asset(
-                  'images/logo1.png', // or use NetworkImage
-                  height: 150,
-                  width: 200,
+                  'assets/images/njelogo1.png', // or use NetworkImage
+                  height: 115,
+                  width: 300,
+                  fit: BoxFit.contain,
                 ),
-                Text(
-                  'NAGA',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 18,
-                    color: Colors.orange,
-                    fontWeight: FontWeight.bold,
-                    fontStyle: FontStyle.italic,
-                  ),
-                ),
-                Text(
-                  'JYOTHI',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 18,
-                    color: Colors.lightGreen,
-                    fontWeight: FontWeight.bold,
-                    fontStyle: FontStyle.italic,
-                  ),
-                ),
-                Text(
-                  'ELECTRICALS',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 18,
-                    color: Colors.blueAccent,
-                    fontWeight: FontWeight.bold,
-                    fontStyle: FontStyle.italic,
-                  ),
-                ),
+                // Text(
+                //   'NAGA',
+                //   style: GoogleFonts.montserrat(
+                //     fontSize: 18,
+                //     color: Colors.orange,
+                //     fontWeight: FontWeight.bold,
+                //     fontStyle: FontStyle.italic,
+                //   ),
+                // ),
+                // Text(
+                //   'JYOTHI',
+                //   style: GoogleFonts.montserrat(
+                //     fontSize: 18,
+                //     color: Colors.lightGreen,
+                //     fontWeight: FontWeight.bold,
+                //     fontStyle: FontStyle.italic,
+                //   ),
+                // ),
+                // Text(
+                //   'ELECTRICALS',
+                //   style: GoogleFonts.montserrat(
+                //     fontSize: 18,
+                //     color: Colors.blueAccent,
+                //     fontWeight: FontWeight.bold,
+                //     fontStyle: FontStyle.italic,
+                //   ),
+                // ),
               ],
             ),
           ),
@@ -180,7 +168,11 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  Widget quickLinks({required String email, required String phone}) {
+  Widget quickLinks({
+    required String email,
+    required String phone,
+    required String phone1,
+  }) {
     Future<void> launchUrlHelper(String url) async {
       final Uri uri = Uri.parse(url);
       if (!await launchUrl(uri)) {
@@ -208,6 +200,16 @@ class _MyHomePageState extends State<MyHomePage> {
             padding: const EdgeInsets.only(left: 8.0, right: 8.0),
             child: Text(
               'Call: $phone',
+              style: GoogleFonts.maitree(color: Colors.white, fontSize: 16),
+            ),
+          ),
+        ),
+        GestureDetector(
+          onTap: () => launchUrlHelper('tel:$phone1'),
+          child: Padding(
+            padding: const EdgeInsets.only(left: 8.0, right: 8.0),
+            child: Text(
+              'Office: $phone1',
               style: GoogleFonts.maitree(color: Colors.white, fontSize: 16),
             ),
           ),

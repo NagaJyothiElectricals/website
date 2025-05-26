@@ -42,7 +42,7 @@ class _ContactPageState extends State<ContactPage> {
           ),
           const SizedBox(height: 20),
           const Text(
-            'Phone: +91 9666111105 • Email: info@nagajyothielectricals.com',
+            'Phone: +91 9666111105\t \tOffice: +91 9989376363\n\n Email: info@nagajyothielectricals.com',
             style: TextStyle(color: Colors.white70, fontSize: 14),
             textAlign: TextAlign.center,
           ),
@@ -320,7 +320,7 @@ class ContactIconsRow extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         IconButton(
-          icon: Image.asset('images/gmail.png', width: 32, height: 32),
+          icon: Image.asset('assets/images/gmail.png', width: 32, height: 32),
           tooltip: 'Gmail',
           onPressed: () {
             _launchUrl('mailto: info@nagajyothielectricals.com');
@@ -328,7 +328,11 @@ class ContactIconsRow extends StatelessWidget {
         ),
         const SizedBox(width: 16),
         IconButton(
-          icon: Image.asset('images/linkedin.png', width: 32, height: 32),
+          icon: Image.asset(
+            'assets/images/linkedIn.png',
+            width: 32,
+            height: 32,
+          ),
           tooltip: 'LinkedIn',
           onPressed: () {
             _launchUrl(
@@ -338,7 +342,11 @@ class ContactIconsRow extends StatelessWidget {
         ),
         const SizedBox(width: 16),
         IconButton(
-          icon: SvgPicture.asset('images/twitter.svg', width: 32, height: 32),
+          icon: SvgPicture.asset(
+            'assets/images/twitter.svg',
+            width: 32,
+            height: 32,
+          ),
           tooltip: 'Twitter',
           onPressed: () {
             _launchUrl('https://twitter.com/yourusername');
